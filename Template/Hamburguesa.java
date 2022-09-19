@@ -124,6 +124,6 @@ public class Hamburguesa{
 		}else{
 			vegetariano = "No es vegetariana";
 		}
-		return "Platillo: " + nombre + "\n" + "Descripcion: " + descripcion + "\n" + "Precio: " + precio + "\n" + queso + ". " + vegetariano;
+		return "Platillo: " + nombre + "\nID: " + id + "\n" + descripcion + "\n" + "Precio: " + precio + "\n" + queso + ". " + vegetariano + "\n";
 	}
 }
