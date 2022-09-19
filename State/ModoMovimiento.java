@@ -6,33 +6,33 @@ public class ModoMovimiento implements EstadoRobot{
 		this.mecha = mecha;
 	}
 
-	public void activar(){
-		System.out.println("***MODO MOVIMIENTO***\nMECHA DEMOLEDOR ya esta activado.");
-	}
-
 	public void caminar(){
 		if(!mecha.getUbicacionCorrecta()){
 			mecha.reducirDistancia();
-			System.out.println("***MODO MOVIMIENTO***\nMECHA DEMOLEDOR se esta acercando a su objetivo.");
+			System.out.println("***MODO MOVIMIENTO***\nMECHA COCIMECERO se esta acercando a su objetivo.");
 		} else {
-			System.out.println("***MODO MOVIMIENTO***\nMECHA DEMOLEDOR ha llegado al objetivo.");
+			System.out.println("***MODO MOVIMIENTO***\nMECHA COCIMECERO ha llegado al objetivo.");
 		}
 	}
 
-	public void demoler(){
+	public void cocinar(){
 		if(!mecha.getUbicacionCorrecta()){
-			System.out.println("***MODO MOVIMIENTO***\nMECHA DEMOLEDOR no ha llegado a su objetivo aun.");
+			System.out.println("***MODO MOVIMIENTO***\nMECHA COCIMECERO no ha llegado a su objetivo aun.");
 		} else {
-			System.out.println("***MODO MOVIMIENTO***\nMECHA DEMOLEDOR pasara al MODO DEMOLICION.");
-			mecha.asignarNuevoEstado(mecha.getEstadoDemoler());
+			System.out.println("***MODO MOVIMIENTO***\nMECHA COCIMECERO pasara al MODO COCINAR.");
+			mecha.asignarNuevoEstado(mecha.getEstadoCocinar());
 		}
 	}
 
-	public void recolectar(){
-		System.out.println("***MODO MOVIMIENTO***\nMECHA DEMOLEDOR no puede recolectar antes de demoler.");
+	public void servir(){
+		if(!mecha.getUbicacionCorrecta()){
+			System.out.println("***MODO MOVIMIENTO***\nMECHA COCIMECERO no ha llegado a su objetivo aun.");
+		} else {
+			System.out.println("***MODO MOVIMIENTO***\nMECHA COCIMECERO pasara al MODO SERVIR.");
+			mecha.asignarNuevoEstado(mecha.getEstadoServir());
+		}
 	}
-	public void apagarse(){
-		System.out.println("***MODO MOVIMIENTO***\nMECHA DEMOLEDOR pasara al MODO SUSPENDIDO");
-		mecha.asignarNuevoEstado(mecha.getEstadoSuspendido());
+	public void suspender(){
+		System.out.println("***MODO SUSPENDIDO***\nMECHA COCIMESERO ya esta SUSPENDIDO.");
 	}
 }
