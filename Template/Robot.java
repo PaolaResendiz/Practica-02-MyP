@@ -12,6 +12,7 @@ public class Robot{
 	private EstadoRobot modoSuspendido;
 	private EstadoRobot modoMovimiento;
 	private EstadoRobot modoServir;
+	private EstadoRobot modoCocinar;
 
 	public Robot(){
 		servido = false;
@@ -22,8 +23,9 @@ public class Robot{
 		modoSuspendido = new ModoSuspendido(this);
 		modoMovimiento = new ModoMovimiento(this);
 		modoServir = new ModoSirviendo(this);
+		modoCocinar = new ModoCocinar(this);
 
-		estadoActual = modoAtender;
+		estadoActual = modoSuspendido;
 	}
 
 
@@ -86,6 +88,10 @@ public class Robot{
 
 	public void setServido(boolean servido){
 		this.servido = servido;
+	}
+
+	public EstadoRobot getEstadoCocinar(){
+		return modoCocinar;
 	}
 
 	public EstadoRobot getEstadoSuspendido(){
