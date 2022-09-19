@@ -6,6 +6,9 @@ import java.util.Iterator;
 public class GrupoHamburguesaDia{
 	private ArrayList<Hamburguesa> hamburguesas = new ArrayList<>();
 
+	/**	
+	 * Constructor de la clase GrupoHamburguesaDia
+	 */
 	public GrupoHamburguesaDia(){
 		Hamburguesa h1 = new Hamburguesa(4, "Hamburguesa especial 1", "Hamburguesa especial 1", 100.0, true, false);
 		Hamburguesa h2 = new Hamburguesa(5, "Hamburguesa especial 2", "Hamburguesa especial 2", 100.0, true, false);
@@ -30,6 +33,9 @@ public class GrupoHamburguesaDia{
 		this.hamburguesas = hamburguesa;
 	}
 
+	/**
+	 * @return el iterador de las hamburguesas
+	 */
 	public Iterator getIterator(){
 		return hamburguesas.iterator();
 	}

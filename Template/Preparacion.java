@@ -18,34 +18,6 @@ public abstract class Preparacion{
 		agregarVegetalesCatsupPan();
 	}
 
-	// public void identificarse(LinkedList<Alumno> alumnos){
-	// 	Scanner sc = new Scanner(System.in);
-	// 	int noCuentaProcesada;
-
-	// 	while (alumnoProcesado == null){
-	// 		System.out.println("\n**********************************"
-	// 						+ "\n**********IDENTIFICACION**********"
-	// 						+ "\n**********************************");
-
-	// 		System.out.println("\nPor favor ingresa tu numero de cuenta sin letras o espacios.");
-
-	// 		while (true){
-	// 			try {
-	// 				String opcionUsuario = sc.nextLine();
-	// 				noCuentaProcesada = Integer.parseInt(opcionUsuario);
-	// 				break;
-	// 			}catch (NumberFormatException ex){
-	// 				System.out.println("\nPor favor ingresa tu numero de cuenta sin letras o espacios.");
-	// 			}
-	// 		}
-
-	// 		for(Alumno a : alumnos){
-	// 			if(a.getNoCuenta() == noCuentaProcesada)
-	// 				alumnoProcesado = a;
-	// 		}
-	// 	}
-    // }
-
 	/**
 	 * Método para dar la bienvenida al usuario
 	 */

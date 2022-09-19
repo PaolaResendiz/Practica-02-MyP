@@ -7,6 +7,9 @@ import java.util.Set;
 public class GrupoHamburguesa{
 	private Hamburguesa hamburguesa[] = new Hamburguesa[3];
 
+	/**
+	 * Constructor de la clase GrupoHamburguesa
+	 */
 	public GrupoHamburguesa(){
 		hamburguesa[0] = new Hamburguesa(1, "Hamburguesa especial 1", "Hamburguesa especial 1", 100.0, true, false);
 		hamburguesa[1] = new Hamburguesa(2, "Hamburguesa especial 2", "Hamburguesa especial 2", 100.0, true, false);
@@ -14,6 +17,9 @@ public class GrupoHamburguesa{
 
 	}
 
+	/**
+	 * @return el el iterador para las hamburguesas del menu normal
+	 */
 	public Iterador getIterador(){
 		return new IteradorArreglo();
 	}
@@ -32,9 +38,13 @@ public class GrupoHamburguesa{
 		this.hamburguesa = hamburguesa;
 	}
 
+
 	private class IteradorArreglo implements Iterador{
 		int indice;
 
+		/**
+		 * @return true si hay un siguiente elemento en el arreglo
+		 */
 		@Override
 		public boolean hasNext(){
 			if(indice < hamburguesa.length){
@@ -43,6 +53,9 @@ public class GrupoHamburguesa{
 			return false;
 		}
 
+		/**
+		 * @return el siguiente elemento en el arreglo
+		 */
 		@Override
 		public Object next(){
 			if(this.hasNext()){

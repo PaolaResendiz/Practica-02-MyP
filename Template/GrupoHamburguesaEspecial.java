@@ -28,13 +28,20 @@ public class GrupoHamburguesaEspecial{
 		this.hamburguesas = hamburguesa;
 	}
 
+	/**
+	 * @return el iterador de las hamburguesas especiales
+	 */
 	public Iterador getIterador(){
 		return new IteradorArreglo();
 	}
 
+
 	private class IteradorArreglo implements Iterador{
 		int indice;
 
+		/**
+		 * @return true si hay un siguiente elemento en el arreglo
+		 */
 		@Override
 		public boolean hasNext(){
 			if(indice < hamburguesas.length){
@@ -43,6 +50,9 @@ public class GrupoHamburguesaEspecial{
 			return false;
 		}
 
+		/**
+		 * @return el siguiente elemento en el arreglo
+		 */
 		@Override
 		public Object next(){
 			if(this.hasNext()){
