@@ -2,10 +2,10 @@ import java.util.Iterator;
 
 public class CheemsRecepcionista{
 	public static void main(String[] args){
-		Consultorio consultorio = new Consultorio();
+		Menu menu = new Menu();
 
-		Iterator pacientes = consultorio.getIteradorPacientes();
-		Iterador doctores = consultorio.getIteradorDoctores();
+		Iterador iteradorHamburguesasEspecial = menu.getIteradorHamburguesasEspecial();
+		Iterator iteradorHamburguesasDia = menu.getIteradorHamburguesasDia();
 
 		/*
 		*El Recepcionista no sabe el tipo de estructura de datos utilizado
@@ -13,17 +13,12 @@ public class CheemsRecepcionista{
 		*
 		*/
 
-		while(pacientes.hasNext()){
-			if(doctores.hasNext()){
-				System.out.println("El paciente: " + 
-					((Paciente)pacientes.next()).toString() + 
-					" puede pasar con el doctor: " +
-					((Doctor)doctores.next()).toString());
-			} else {
-				System.out.println("No hay doctores disponibles de momento.");
-				break;
-			}
+		while(iteradorHamburguesasEspecial.hasNext()){
+			System.out.println(iteradorHamburguesasEspecial.next());
+	}
+	
+		while(iteradorHamburguesasDia.hasNext()){
+			System.out.println(iteradorHamburguesasDia.next());
 		}
-
 	}
 }
