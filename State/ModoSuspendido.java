@@ -17,7 +17,7 @@ public class ModoSuspendido implements EstadoRobot{
 
 	public void atender(){
 		if(mecha.getOrdenRecibida() && mecha.getUbicacionCorrecta() 
-			&& mecha.getAtencionAcabada() && mecha.getCocinandoAlimentos()){
+			&& mecha.getAtendiendoAcabada() && mecha.getCocinandoAlimentos()){
 			System.out.println("***MODO SUSPENDIDO***\nMECHA COCIMESERO ha terminado su trabajo por hoy.");
 		} else {
 			System.out.println("***MODO SUSPENDIDO***\nMECHA COCIMESERO no puede demoler si esta SUSPENDIDO.");
