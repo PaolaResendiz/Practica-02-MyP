@@ -2,63 +2,46 @@ public class ModoSuspendido implements EstadoRobot{
 
 	Robot mecha;
 
-	public ModoSuspendido(Robot mecha){
+	public ModoSuspender(Robot mecha){
 		this.mecha = mecha;
 	}
 
-	public void activar(){
-		if(mecha.getUbicacionCorrecta() && mecha.getDemolicionAcabada() && mecha.getEscombrosLimpios()){
-			System.out.println("***MODO SUSPENDIDO***\nMECHA DEMOLEDOR ha terminado su trabajo por hoy." +
-				"Pasara a MODO APAGADO.");
-			mecha.asignarNuevoEstado(mecha.getEstadoApagado());
-		} else {
-			System.out.println("***MODO SUSPENDIDO***\nMECHA DEMOLEDOR ha sido activado.");
-		}
-	}
-
 	public void caminar(){
-		if(mecha.getUbicacionCorrecta() && mecha.getDemolicionAcabada() && mecha.getEscombrosLimpios()){
-			System.out.println("***MODO SUSPENDIDO***\nMECHA DEMOLEDOR ha terminado su trabajo por hoy." +
-				"Pasara a MODO APAGADO.");
-			mecha.asignarNuevoEstado(mecha.getEstadoApagado());
+		if(mecha.getOrdenRecibida() && mecha.getUbicacionCorrecta() 
+			&& mecha.getAtencionAcabada() && mecha.getCocinandoAlimentos()){
+			System.out.println("***MODO SUSPENDIDO***\nMECHA COCIMESERO ha terminado su trabajo por hoy.");
 		} else {
-			if(mecha.getOrdenRecibida()){
-				System.out.println("***MODO SUSPENDIDO***\nMECHA DEMOLEDOR pasara al MODO MOVIMIENTO.");
-				mecha.asignarNuevoEstado(mecha.getEstadoCaminar());
-			} else {
-				System.out.println("***MODO SUSPENDIDO***\nMECHA DEMOLEDOR no ha recibido una orden. Pasara al MODO APAGADO.");
-				mecha.asignarNuevoEstado(mecha.getEstadoApagado());
-			}
+			System.out.println("***MODO SUSPENDIDO***\nMECHA COCIMESERO no puede caminar si esta SUSPENDIDO.");
 		}
 	}
 
-	public void demoler(){
-		if(mecha.getUbicacionCorrecta() && mecha.getDemolicionAcabada() && mecha.getEscombrosLimpios()){
-			System.out.println("***MODO SUSPENDIDO***\nMECHA DEMOLEDOR ha terminado su trabajo por hoy." +
-				"Pasara a MODO APAGADO.");
-			mecha.asignarNuevoEstado(mecha.getEstadoApagado());
+	public void atender(){
+		if(mecha.getOrdenRecibida() && mecha.getUbicacionCorrecta() 
+			&& mecha.getAtencionAcabada() && mecha.getCocinandoAlimentos()){
+			System.out.println("***MODO SUSPENDIDO***\nMECHA COCIMESERO ha terminado su trabajo por hoy.");
 		} else {
-			System.out.println("***MODO SUSPENDIDO***\nMECHA DEMOLEDOR no puede demoler lejos del objetivo.");
+			System.out.println("***MODO SUSPENDIDO***\nMECHA COCIMESERO no puede demoler si esta SUSPENDIDO.");
 		}
 	}
 
-	public void recolectar(){
-		if(mecha.getUbicacionCorrecta() && mecha.getDemolicionAcabada() && mecha.getEscombrosLimpios()){
-			System.out.println("***MODO SUSPENDIDO***\nMECHA DEMOLEDOR ha terminado su trabajo por hoy." +
-				"Pasara a MODO APAGADO.");
-			mecha.asignarNuevoEstado(mecha.getEstadoApagado());
+	public void cocinar(){
+		if(mecha.getOrdenRecibida() && mecha.getUbicacionCorrecta() 
+			&& mecha.getAtencionAcabada() && mecha.getCocinandoAlimentos()){
+			System.out.println("***MODO SUSPENDIDO***\nMECHA COCIMESERO ha terminado su trabajo por hoy.");
 		} else {
-			System.out.println("***MODO SUSPENDIDO***\nMECHA DEMOLEDOR no puede recolectar antes de demoler.");
+			System.out.println("***MODO SUSPENDIDO***\nMECHA COCIMESERO no puede recolectar escombros si esta SUSPENDIDO.");
 		}
 	}
-	public void apagarse(){
-		if(mecha.getUbicacionCorrecta() && mecha.getDemolicionAcabada() && mecha.getEscombrosLimpios()){
-			System.out.println("***MODO SUSPENDIDO***\nMECHA DEMOLEDOR ha terminado su trabajo por hoy." +
-				"Pasara a MODO APAGADO.");
-			mecha.asignarNuevoEstado(mecha.getEstadoApagado());
+	public void servir(){
+		if(mecha.getOrdenRecibida() && mecha.getUbicacionCorrecta() 
+			&& mecha.getAtencionAcabada() && mecha.getCocinandoAlimentos()){
+			System.out.println("***MODO SUSPENDIDO***\nMECHA COCIMESERO ha terminado su trabajo por hoy.");
 		} else {
-			System.out.println("***MODO SUSPENDIDO***\nMECHA DEMOLEDOR pasara al MODO APAGADO.");
-			mecha.asignarNuevoEstado(mecha.getEstadoApagado());
+			System.out.println("***MODO SUSPENDIDO***\nMECHA COCIMESERO no puede recolectar escombros si esta SUSPENDIDO.");
 		}
+	}
+	
+	public void suspender(){
+		System.out.println("***MODO SUSPENDIDO***\nMECHA COCIMESERO ya esta SUSPENDIDO.");
 	}
 }
