@@ -4,18 +4,31 @@ public class ModoAtender implements EstadoRobot{
 
 	Robot mecha;
 
+	/**
+	 * Constructor de la clase
+	 * @param mecha Robot
+	 */
 	public ModoAtender(Robot mecha){
 		this.mecha = mecha;
 	}
 
+	/**
+	 * Metodo que permite activarse al robot
+	 */
 	public void activar(){
 		System.out.println("***MODO ATENDER***\nFRED ya esta activado.");
 	}
 
+	/**
+	 * Metodo que permite suspenderse al robot
+	 */
 	public void caminar(){
 		System.out.println("***MODO ATENDER***\nFRED no puede caminar mientras atiende.");	
 	}
 
+	/**
+	 * Metodo que permite atender al robot
+	 */
 	public void atender(){
 	
 		Restaurante restaurante = new Restaurante();
@@ -28,17 +41,8 @@ public class ModoAtender implements EstadoRobot{
 		GrupoHamburguesa hamburguesas = new GrupoHamburguesa();
 		GrupoHamburguesaEspecial hamburguesasEspecial = new GrupoHamburguesaEspecial();
 		GrupoHamburguesaDia hamburguesasDia = new GrupoHamburguesaDia();
-
-		/*
-		*El Recepcionista no sabe el tipo de estructura de datos utilizado
-		*pero puede acceder a los elementos.
-		*
-		*/
 		System.out.println("Bienvenido Usuario, este es nuestro menu, ¿Que hamburguesa desea?");
 
-		// Hamburguesa [] hamburguesas = new Hamburguesa[9];
-		// int i = 0;
-		
 	
 		Scanner sc = new Scanner(System.in);
 		int opcion;
@@ -75,63 +79,27 @@ public class ModoAtender implements EstadoRobot{
 					break;
 				}else{
 					System.out.println("El ID que ingresaste no esta en el menu, por favor leelo de nuevo y elige un numero valido\n");
+					while(iteradorHamburguesas.hasNext()){
+						System.out.println(iteradorHamburguesas.next());
+					}
+			
+					while(iteradorHamburguesasDia.hasNext()){
+						System.out.println(iteradorHamburguesasDia.next());
+					}
+			
+					while(iteradorHamburguesasEspecial.hasNext()){
+						System.out.println(iteradorHamburguesasEspecial.next());
+					}
 				}
-				// switch(opcion){
 
-				// 	case 1:
-				// 		preparacion = new HamburguesaUno();
-				// 		preparacion.preparacion(hamburguesas.getHamburguesas()[0]);
-				// 		break;
-
-				// 	case 2:
-				// 		preparacion = new HamburguesaDos();
-				// 		preparacion.preparacion(hamburguesas.getHamburguesas()[1]);
-				// 		break;
-					
-				// 	case 3:
-				// 		preparacion = new HamburguesaTres();
-				// 		preparacion.preparacion(hamburguesas.getHamburguesas()[2]);
-				// 		break;
-
-				// 	case 4:
-				// 		preparacion = new HamburguesaDiaUno();
-				// 		preparacion.preparacion(hamburguesasDia.getHamburguesas().get(0));
-
-				// 	case 5:
-				// 		preparacion = new HamburguesaDiaDos();
-				// 		preparacion.preparacion(hamburguesasDia.getHamburguesas().get(1));
-
-				// 	case 6:
-				// 		preparacion = new HamburguesaDiaTres();
-				// 		preparacion.preparacion(hamburguesasDia.getHamburguesas().get(2));
-					
-				// 	case 7:
-				// 		preparacion = new HamburguesaEspecialUno();
-				// 		preparacion.preparacion(hamburguesasEspecial.getHamburguesas()[0]);
-				// 		break;
-				// 	case 8:
-				// 		preparacion = new HamburguesaEspecialDos();
-				// 		preparacion.preparacion(hamburguesasEspecial.getHamburguesas()[1]);
-				// 		break;
-
-				// 	case 9:
-				// 		preparacion = new HamburguesaEspecialTres();
-				// 		preparacion.preparacion(hamburguesasEspecial.getHamburguesas()[2]);
-				// 		break;
-
-				// 	case 0:
-				// 		break;
-
-				// 	default:
-				// 		System.out.println("Ingresa un numero valido.");
-				// 		break;
-
-				// }
 
 		}while(opcion <= 0 || opcion >= 10);
 
 	}
 
+	/**
+	 * Metodo que permite suspenderse al robot
+	 */
 	public void cocinar(){
 		if(!mecha.getOpcionValida()){
 			System.out.println("No has elegido un platillo valido, aun no se puede cocinar.");
@@ -140,10 +108,17 @@ public class ModoAtender implements EstadoRobot{
 			mecha.asignarNuevoEstado(mecha.getEstadoCocinar());
 		}
 }
+
+	/**
+	 * Metodo que permite suspenderse al robot
+	 */
 	public void servir(){
 		System.out.println("***MODO SUSPENDIDO***\nFRED no puede servir si esta atendiendo.");
 }
 
+	/**
+	 * Metodo que permite suspenderse al robot
+	 */
 		public void suspender(){
 		System.out.println("***MODO SUSPENDIDO***\nFRED no puede suspenderse si esta atendiendo.");
 }

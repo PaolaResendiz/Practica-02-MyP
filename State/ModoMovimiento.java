@@ -6,6 +6,7 @@ public class ModoMovimiento implements EstadoRobot{
 		this.mecha = mecha;
 	}
 
+<<<<<<< Updated upstream
 	public void caminar(){
 		if(!mecha.getUbicacionCorrecta()){
 			mecha.reducirDistancia();
@@ -34,5 +35,39 @@ public class ModoMovimiento implements EstadoRobot{
 	}
 	public void suspender(){
 		System.out.println("***MODO SUSPENDIDO***\nMECHA COCIMESERO ya esta SUSPENDIDO.");
+=======
+	public void activar(){
+		System.out.println("***MODO MOVIMIENTO***\nFRED ya esta activado.");
+	}
+
+	public void caminar(){
+		System.out.println("***MODO MOVIMIENTO***\nFRED ya esta caminando hacia ti.");
+
+	}
+
+
+	public void atender(){
+			System.out.println("***MODO MOVIMIENTO***\nFRED esta contigo, listo para atenderte");
+			mecha.asignarNuevoEstado(mecha.getEstadoAtender());
+
+	}
+
+	public void cocinar(){
+			System.out.println("***MODO MOVIMIENTO***\nFRED no puede cocinar si esta caminando.");
+	}
+	public void servir(){
+		if(!mecha.getCocinado()){
+			System.out.println("***MODO MOVIMIENTO***\nFRED no puede servir si no se ha preparado la comida.");
+		}else{
+			System.out.println("***MODO MOVIMIENTO***\nFRED esta contigo, listo para servirte.");
+			mecha.asignarNuevoEstado(mecha.getEstadoServir());
+		}
+	}
+
+	
+	public void suspender(){
+		System.out.println("***MODO MOVIMIENTO***\nFRED pasará a modo SUSPENDIDO.");
+		mecha.asignarNuevoEstado(mecha.getEstadoSuspendido());
+>>>>>>> Stashed changes
 	}
 }

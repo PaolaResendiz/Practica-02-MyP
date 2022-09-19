@@ -1,14 +1,10 @@
-import java.util.LinkedList;
-import java.util.Queue;
-import java.util.Hashtable;
-import java.util.Iterator;
-import java.util.Set;
- 
+
 public class GrupoHamburguesa{
 	private Hamburguesa hamburguesa[] = new Hamburguesa[3];
 
 	/**
 	 * Constructor de la clase GrupoHamburguesa
+	 * 	* Construye un arreglo de hamburguesas
 	 */
 	public GrupoHamburguesa(){
 		hamburguesa[0] = new Hamburguesa(1, "Hamburguesa especial 1", "Hamburguesa especial 1", 100.0, true, false);
@@ -64,37 +60,5 @@ public class GrupoHamburguesa{
 			return null;
 		}
 	}
-	// Hashtable<String, HamburguesaEspecial> hamburguesashamburguesa;
-	// Set<Integer> llaves;
-	// Iterator<Integer> iterador;
 
-	// public void llenar(){
-	//     Hashtable<Integer, Hamburguesa> hamburguesa = new Hashtable();
-	// 	Hamburguesa hamburguesa = new Hamburguesa(1, "Hamburguesa Especial", "Hamburguesa con queso, lechuga, tomate, cebolla, pepinillos, mayonesa y ketchup", 50.00, true, false);
-	// 	Hamburguesa hamburguesa2 = new Hamburguesa(2, "Hamburguesa Especial", "Hamburguesa con queso, lechuga, tomate, cebolla, pepinillos, mayonesa y ketchup", 50.00, true, false);
-	// 	Hamburguesa hamburguesa3 = new Hamburguesa(3, "Hamburguesa Especial", "Hamburguesa con queso, lechuga, tomate, cebolla, pepinillos, mayonesa y ketchup", 50.00, true, false);eciales = new Hashtable();
-	// 	hamburguesa.put(hamburguesa.getId(), hamburguesa.getNombre());
-	// 	hamburguesa.put(hamburguesa2.getId(), hamburguesa2.getNombre());
-	// 	hamburguesa.put(hamburguesa3.getId(), hamburguesa3.getNombre());
-	// 	Set<Integer> keys = hamburguesa.keySet();
-	// Iterator<Integer> itr = keys.iterator();
-	// hamburguesashamburguesa = hamburguesa;
-	// }
-
-	// private class IteradorArreglo implements Iterador{
-
-	// 	@Override
-	// 	public boolean hasNext(){
-
-	// 	}
-
-	// 	@Override
-	// 	public Object next(){
-	// 		hamburguesa.next();
-	// 	}
-	
-	// }
-	// public Iterador getIterator(){
-	// 	return new IteradorArreglo();
-	// }
 }

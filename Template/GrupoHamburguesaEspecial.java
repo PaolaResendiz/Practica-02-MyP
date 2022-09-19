@@ -7,6 +7,10 @@ import java.util.Set;
 public class GrupoHamburguesaEspecial{
 	private Hamburguesa hamburguesas[] = new Hamburguesa[3];
 
+	/**
+	 * Constructor de la clase GrupoHamburguesaEspecial
+	 * Construye un arreglo de hamburguesas especiales
+	 */
 	public GrupoHamburguesaEspecial(){
 		hamburguesas[0] = new Hamburguesa(7, "Hamburguesa especial 1", "Hamburguesa especial 1", 100.0, true, false);
 		hamburguesas[1] = new Hamburguesa(8, "Hamburguesa especial 2", "Hamburguesa especial 2", 100.0, true, false);

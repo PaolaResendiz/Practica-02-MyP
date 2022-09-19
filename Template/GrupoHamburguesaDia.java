@@ -1,5 +1,4 @@
-import java.util.LinkedList;
-import java.util.Queue;
+
 import java.util.ArrayList;
 import java.util.Iterator;
 
@@ -8,6 +7,7 @@ public class GrupoHamburguesaDia{
 
 	/**	
 	 * Constructor de la clase GrupoHamburguesaDia
+	 * Construye un arralist de hamburguesas del dia
 	 */
 	public GrupoHamburguesaDia(){
 		Hamburguesa h1 = new Hamburguesa(4, "Hamburguesa especial 1", "Hamburguesa especial 1", 100.0, true, false);

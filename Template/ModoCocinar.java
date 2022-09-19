@@ -2,14 +2,24 @@ public class ModoCocinar implements EstadoRobot{
 
 	Robot mecha;
 
+	/**
+	 * Constructor de la clase
+	 * @param mecha Robot
+	 */
 	public ModoCocinar(Robot mecha){
 		this.mecha = mecha;
 	}
 
+	/**
+	 * Metodo que permite activarse al robot
+	 */
 	public void activar(){
 		System.out.println("***MODO COCINADO***\n FRED ya esta activado.");
 	}
 
+	/**
+	 * Metodo que permite suspenderse al robot
+	 */
 	public void caminar(){
 		if(mecha.getCocinado() == false){
 			System.out.println("***MODO COCINADO***\nFRED no puede servir si esta cocinando.");
@@ -19,10 +29,16 @@ public class ModoCocinar implements EstadoRobot{
 		}
 	}
 
+	/**
+	 * Metodo que permite cocinar al robot
+	 */
 	public void atender(){
 			System.out.println("***MODO COCINADO***\nFRED no puede atender si esta cocinando.");
 	}
 
+	/**
+	 * Metodo que permite cocinar al robot
+	 */
 	public void cocinar(){
 		if(mecha.getCocinado() == false){
 		Preparacion preparacion;
@@ -35,6 +51,7 @@ public class ModoCocinar implements EstadoRobot{
 					case 1:
 						preparacion = new HamburguesaUno();
 						preparacion.preparacion(hamburguesas.getHamburguesas()[0]);
+						System.out.println("1");
 						break;
 
 					case 2:
@@ -81,6 +98,10 @@ public class ModoCocinar implements EstadoRobot{
 				System.out.println("***MODO COCINADO***\nYa se ha cocinado la hamburguesa.");
 			}
 	}
+
+	/**
+	 * Metodo que permite suspenderse al robot
+	 */
 	public void servir(){
 		if(mecha.getCocinado() == true){
 			System.out.println("***MODO COCINADO***\nFRED no ha caminado hacia ti, no puede servirte.");
@@ -89,6 +110,10 @@ public class ModoCocinar implements EstadoRobot{
 		}
 	}
 	
+
+	/**
+	 * Metodo que permite apagarse al robot
+	 */
 	public void suspender(){
 		System.out.println("***MODO COCINADO***\nFRED no puede pasar a estado SUSPENDIDO si esta cocinando.");
 	}
