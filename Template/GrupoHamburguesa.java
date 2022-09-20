@@ -7,9 +7,9 @@ public class GrupoHamburguesa{
 	 * 	* Construye un arreglo de hamburguesas
 	 */
 	public GrupoHamburguesa(){
-		hamburguesa[0] = new Hamburguesa(1, "Hamburguesa especial 1", "Hamburguesa especial 1", 100.0, true, false);
-		hamburguesa[1] = new Hamburguesa(2, "Hamburguesa especial 2", "Hamburguesa especial 2", 100.0, true, false);
-		hamburguesa[2] = new Hamburguesa(3, "Hamburguesa especial 3", "Hamburguesa especial 3", 100.0, true, false);
+		hamburguesa[0] = new Hamburguesa(1, "Big Chicken", "Hamburguesa con una crujiente pieza de pollo empanizada y sazonada con las mejores especias del campo para darle un mejor sabor, con lechuga, tomates frescos, mayonesa y catsup. Acompañada de un refresco mediano y papas fritas chicas", 105.0, false, false);
+		hamburguesa[1] = new Hamburguesa(2, "Famous Star with Cheese", "Hamburguesa con deliciosa carne de res asada a la parrilla, salsa especial, queso americano, mayonesa, lechuga, cebolla, tomate y pepinillos. Acompañada de un refresco mediano y papas fritas chicas", 112.0, true, false);
+		hamburguesa[2] = new Hamburguesa(3, "Hamburguesa not to meat", "Hamburguesa con deliciosa mezcla de cereales y tepeh fresco, salsa de soja, alga kombu, zanahoria, cebolla, orégano. Acompañada de un refresco mediano y papas fritas chicas", 115.0, false, true);
 
 	}
 

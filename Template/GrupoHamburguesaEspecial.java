@@ -12,9 +12,9 @@ public class GrupoHamburguesaEspecial{
 	 * Construye un arreglo de hamburguesas especiales
 	 */
 	public GrupoHamburguesaEspecial(){
-		hamburguesas[0] = new Hamburguesa(7, "Hamburguesa especial 1", "Hamburguesa especial 1", 100.0, true, false);
-		hamburguesas[1] = new Hamburguesa(8, "Hamburguesa especial 2", "Hamburguesa especial 2", 100.0, true, false);
-		hamburguesas[2] = new Hamburguesa(9, "Hamburguesa especial 3", "Hamburguesa especial 3", 100.0, true, false);
+		hamburguesas[0] = new Hamburguesa(7, "Bacon Big Angus Burger", "Carne Black Angus asada a la parrilla, queso pepper jack, cebolla morada, lechuga, tomate, salsa Santa Fe y tocino. Acompañada de un refresco grande y papas fritas medianas", 155.0, true, false);
+		hamburguesas[1] = new Hamburguesa(8, "Jalapeño Hot Chicken", "Hamburguesa de crujiente pechuga de pollo empanizada y sazonada con especias, Salsa Santa Fe, Chile Jalapeño, Queso Pepperjack, Cebolla Morada, Tomate y Lechuga. Acompañada de un refresco grande y papas fritas medianas", 150.0, true, false);
+		hamburguesas[2] = new Hamburguesa(9, "best veggie burger", "La mejor hamburguesa vegetariana contiene una mezcla de quinoa, espinacas y zanahorias, queso vegano, salsa pesto vegana, pepinillos encurtidos, concentrado de manzana y albahaca", 160.0, true, true);
 
 	}
 
