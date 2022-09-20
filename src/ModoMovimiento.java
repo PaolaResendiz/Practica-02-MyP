@@ -49,7 +49,7 @@ public class ModoMovimiento implements EstadoRobot{
 		if(!mecha.getCocinado()){
 			System.out.println("***MODO MOVIMIENTO***\nFRED no puede servir si se esta moviemdo.");
 		}else{
-			System.out.println("***MODO MOVIMIENTO***\nFRED esta contigo, listo para servirte.");
+			System.out.println("***MODO MOVIMIENTO***\nFRED pasa a modo SERVIR, listo para servirte.");
 			mecha.asignarNuevoEstado(mecha.getEstadoServir());
 		}
 	}

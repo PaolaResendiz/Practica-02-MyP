@@ -67,15 +67,17 @@ public class ModoCocinar implements EstadoRobot{
 					case 4:
 						preparacion = new HamburguesaDiaUno();
 						preparacion.preparacion(hamburguesasDia.getHamburguesas().get(0));
+						break;
 
 					case 5:
 						preparacion = new HamburguesaDiaDos();
 						preparacion.preparacion(hamburguesasDia.getHamburguesas().get(1));
+						break;
 
 					case 6:
 						preparacion = new HamburguesaDiaTres();
 						preparacion.preparacion(hamburguesasDia.getHamburguesas().get(2));
-					
+						break;
 					case 7:
 						preparacion = new HamburguesaEspecialUno();
 						preparacion.preparacion(hamburguesasEspecial.getHamburguesas()[0]);

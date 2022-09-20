@@ -14,7 +14,7 @@ public class ModoSuspendido implements EstadoRobot{
 	 * Metodo que permite activarse al robot
 	 */
 	public void activar(){
-		System.out.println("***MODO SUSPENDIDO***\n FRED esta CAMINANDO hacia ti, llegará contigo en un segundo.");
+		System.out.println("***MODO SUSPENDIDO***\n FRED pasa a modo CAMINANDO y llega contigo.");
 		mecha.asignarNuevoEstado(mecha.getEstadoCaminar());
 	}
 
